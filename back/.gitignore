@@ -1,0 +1,19 @@
+*.pem
+
+node_modules/
+    .DS_Store
+    *.sqlite
+    *.png
+    *.jpg
+    .env
+    .idea
+
+#keys
+id_rsa_priv.pem
+id_rsa_pub.pem
+
+#env
+.env
+
+
+    

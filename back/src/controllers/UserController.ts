@@ -1,4 +1,4 @@
-import {prisma} from '../config/db';
+import {Prisma} from '../config/db';
 import type {Request, Response} from 'express';
 import auth from "../config/auth";
 import { Mailer } from '../config/mailer';
@@ -12,7 +12,7 @@ export class UserController {
         const {email, name, password} = req.body;
         try {
             const {hash, salt} = auth.generatePassword(password);
-            const newUser = await prisma.user.create({
+            const newUser = await Prisma.user.create({
                 data: {
                     email,
                     name,
